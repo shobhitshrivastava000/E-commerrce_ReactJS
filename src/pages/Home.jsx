@@ -121,11 +121,11 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center flex-grow">
+          <div className="flex items-center justify-center -mt-5 flex-grow ">
             {loading ? (
               <Spinner />
             ) : currentPosts.length > 0 ? (
-              <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl p-2 mx-auto space-y-18 space-x-5 min-h[80vh]">
+              <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl p-2 mx-auto space-y-18 space-x-5 min-h[80vh] ">
                 {currentPosts.map((post) => (
                   <Product key={post.id} post={post} />
                 ))}
@@ -137,7 +137,7 @@ const Home = () => {
             )}
           </div>
         </div>
-        <div className="flex justify-around mt-5">
+        <div className="flex justify-around mb-6">
           <div>
             <button
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
